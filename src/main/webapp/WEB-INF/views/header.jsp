@@ -11,7 +11,7 @@
 <meta name="_csrf" content="${_csrf.token}">
     <meta name="_csrf_header" content="${_csrf.headerName}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" >
 <link
 	href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap"
 	rel="stylesheet">
@@ -134,14 +134,15 @@
 			</sec:authorize>
 		</div>
 	</div>
-
-<div class="hero-container" style="height: 400px;">
+	
+<div class= "cha-container">
+<div class= "hero-container">
 <div class= "slideshow-container">
 <div class= "slides fade" >
 	<img src="${pageContext.request.contextPath}/resources/img/광고1.jpg" style=" width:100%; height:280px;">
 </div>
 <div class= "slides fade" >
-	<img src="${pageContext.request.contextPath}/resources/img/광고2.png" style=" width:100%; height:280px;">
+	<img src="${pageContext.request.contextPath}/resources/img/광고2.jpg" style=" width:100%; height:280px;">
 </div>
 <div class= "slides fade" >
 	<img src="${pageContext.request.contextPath}/resources/img/광고3.jpg" style=" width:100%; height:280px;">
@@ -150,13 +151,12 @@
 <a class="prev" onclick="plusSlides(-1)">❮</a>
 <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
-
+</div>
 
     <div class="fixedBtn_wrap topBtn">
         <a href="${pageContext.request.contextPath}/customer/storeList.do" class="btn_fixedTicketing">주문하기</a>
         <a href="#" id="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
     </div>
-
 	
 	
 	
@@ -164,6 +164,7 @@
       <a href="${pageContext.request.contextPath}/customer/storeList.do" class="btn_fixedTicketing">주문하기</a>
       <a href="#" id="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
     </div>
+   
 	<script>
 		<%--
 	function clearSearch() {
@@ -189,4 +190,5 @@
 			});
 		});
 		--%>
+		
 	</script>
