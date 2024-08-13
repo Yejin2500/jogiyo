@@ -19,6 +19,8 @@
 	href="${pageContext.request.contextPath}/resources/css/main.css">
 <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/img/favicon.ico" type="image/x-icon">
 
+
+
 <script type="text/javascript">
 	function viewStore(id) {
 		var form = document.createElement('form');
@@ -34,6 +36,31 @@
 		document.body.appendChild(form);
 		form.submit();
 	}
+	let slideIndex = 1;
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slides");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function autoShowSlides() {
+        plusSlides(1);
+        setTimeout(autoShowSlides, 5000); // Change image every 5 seconds
+    }
+    window.onload = function() {
+         // 슬라이드 쇼 초기화
+         showSlides(slideIndex);
+         autoShowSlides();
+    }
 </script>
 <title>조기요</title>
 </head>
@@ -108,27 +135,31 @@
 		</div>
 	</div>
 
-	<div class="search-section">
-		<div class="header-container">
-			<h1><font style="font-weight:bold; color:white">어디로 <font style="color:orange">배달해</font> 드릴까요?</font></h1>
-			<p><font style="font-weight:bold; color:white">가게 이름이나 배달받으실 동 이름으로 검색해주세요</font></p>
-			<div class="search-bar">
-				<button class="location-btn" style="background-image: url('${pageContext.request.contextPath}/resources/img/point.jpeg')">
-					<%-- <img src="${pageContext.request.contextPath}/resources/img/point.jpeg" alt="location icon"> --%>
-				</button>
-				<form name="fffff" action="${pageContext.request.contextPath}/store/headerSearch.do" method="post">
-				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-				<input type="text" placeholder="배달받을 주소 혹은 가게이름을 검색해주세요" id="search-input" name="headerSearch" style="width:400px">
-				<input type="submit" value="검색" style="width:100px;">
-				<input type="reset" value="취소" style="width:100px;">
-				</form>
-				<%-- 
-				<div class="dropdown">
-					<a href="#">현재위치로 설정하기</a> <a href="#">검색 기록 1</a> <a href="#">검색
-						기록 2</a>--%>
-				</div>
-			</div>
-		</div>
+<div class="hero-container" style="height: 400px;">
+<div class= "slideshow-container">
+<div class= "slides fade" >
+	<img src="${pageContext.request.contextPath}/resources/img/광고1.jpg" style=" width:100%; height:280px;">
+</div>
+<div class= "slides fade" >
+	<img src="${pageContext.request.contextPath}/resources/img/광고2.png" style=" width:100%; height:280px;">
+</div>
+<div class= "slides fade" >
+	<img src="${pageContext.request.contextPath}/resources/img/광고3.jpg" style=" width:100%; height:280px;">
+</div>
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+
+    <div class="fixedBtn_wrap topBtn">
+        <a href="${pageContext.request.contextPath}/customer/storeList.do" class="btn_fixedTicketing">주문하기</a>
+        <a href="#" id="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
+    </div>
+
+	
+	
+	
 	  <div class="fixedBtn_wrap topBtn">
       <a href="${pageContext.request.contextPath}/customer/storeList.do" class="btn_fixedTicketing">주문하기</a>
       <a href="#" id="btn_gotoTop"><img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동" /></a>
