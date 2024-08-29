@@ -67,7 +67,7 @@
 
 <body>
 
-	<div class="header">
+	<div class="header" style="z-index: 1000;">
 		<ul class="menu">
 			<li><a href="${pageContext.request.contextPath}/"
 				style="display: inline-block; /* block 대신 inline-block으로 변경 */ padding: 0;">
@@ -136,7 +136,7 @@
 	</div>
 	
 <div class= "cha-container">
-<div class= "hero-container">
+<div class= "hero-container" style="z-index: 1;">
 <div class= "slideshow-container">
 <div class= "slides fade" >
 	<img src="${pageContext.request.contextPath}/resources/img/광고1.jpg" style=" width:100%; height:280px;">

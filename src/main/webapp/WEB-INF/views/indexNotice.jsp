@@ -6,6 +6,8 @@
 <div class="notice-container">
     <div class="notice-header">
     <h1 class="notice-title">${dto.subject}</h1>
+    
+  
     </div>
     <div class="notice-content">
         <div class="notice-item">

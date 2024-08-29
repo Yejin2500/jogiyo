@@ -47,7 +47,7 @@ public class HomeController {
 	public String indexNotice(HttpServletRequest req) {
 		NoticeDTO dto = adminmapper.indexNotice();
 		req.setAttribute("dto", dto);
-		return "viewNotice";
+		return "indexNotice";
 	}
 	
 }
