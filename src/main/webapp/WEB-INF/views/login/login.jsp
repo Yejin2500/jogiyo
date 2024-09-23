@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
-<jsp:include page="../header.jsp"/>
+<jsp:include page="../header3.jsp"/>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/login.css">
 
 <div align="center" style="margin-top: 80px;">

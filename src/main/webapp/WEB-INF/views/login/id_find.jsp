@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:include page="../header.jsp"/>
+<jsp:include page="../header3.jsp"/>
 <jsp:include page="../js/id_find_js.jsp"/>
 <!-- 아이디 찾기 페이지 -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/idFind.css">

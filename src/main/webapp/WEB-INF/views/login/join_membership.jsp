@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <!-- 회원가입 페이지 -->
-<jsp:include page="../header.jsp" />
+<jsp:include page="../header3.jsp" />
 <jsp:include page="../js/join_membership_js.jsp"/>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/joinMemberShip.css">
 
 <div align="center" style="margin-top: 60px;">
 <div align="center" style="margin-top: 20px; margin-bottom: 20px;">
-<h1><span style="font-weight: bold; color:#fa0050; font-family: 'Gothic A1', sans-serif;">회원가입</span></h1>
+<h1 class="h1">회원가입</h1>
 </div>
    <form name="f1" method="post" onsubmit="return check()"
    action="/login/join_membership_ok.do" class="form-container">
@@ -15,29 +15,30 @@
      
          
         <div class="form-row" >
-           <div class="label-lo">이름</div>
-           <div class="input"><input type="text" title="이름" name="name" id="name" disabled ></div>
+           <div class="label-lo"></div>
+           <div class="input"><input type="text" title="이름" name="name" id="name" placeholder="이름"
+           disabled ></div>
        </div>
          
          
          <div class="form-row" >
-            <div class="label-lo" >아이디</div>
-             <div class="input"><input type="text" name="id" id="jid" title="아이디" disabled ></div>
+            <div class="label-lo" ></div>
+             <div class="input"><input type="text" name="id" id="jid" title="아이디" placeholder="아이디" disabled ></div>
           <input type="button" value="중복확인" id="dupli"  onclick="idCheck()">
         </div>
         
       <div class="form-row" >
-            <div class="label-lo" >비밀번호</div>
-            <div class="input"><input type="password" name="passwd" id="pw" title="비밀번호" disabled ></div>
+            <div class="label-lo" ></div>
+            <div class="input"><input type="password" name="passwd" id="pw" title="비밀번호" placeholder="비밀번호" disabled ></div>
       </div>
       
      <div class="form-row" >
-         <div class="label-lo" >이메일</div>
-         <div class="input"><input type="text" name="mail" id="mail" title="이메일" disabled></div>
+         <div class="label-lo" ></div>
+         <div class="input"><input type="text" name="mail" id="mail" title="이메일" placeholder="이메일" disabled></div>
      </div>
       
        <div class="form-row" >
-         <div class="label-lo" >전화번호</div>
+         <div class="label-lo" ></div>
           <div class="input-lo">
          <input type="text" title="전화번호" name="phone1" id="p1" size="3" maxlength="3" disabled> 
          -
@@ -50,7 +51,7 @@
       <div>
       <table style="position:relative; left:35px;">
       <div class="form-row">
-         <div class="label-lo" >인증번호</div>
+         <div class="label-lo" ></div>
          <div class="input"><input type="text" name="code" id="code" placeholder="(필수)인증번호 입력"></div>
         <button class="join_button" type="button" onclick="out()" id="dupli">인증번호확인</button>
       </div>

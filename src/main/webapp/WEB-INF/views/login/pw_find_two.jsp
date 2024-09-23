@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <!-- 비밀번호찾기 두번째 페이지 -->
-<jsp:include page="../header.jsp"/>
+<jsp:include page="../header3.jsp"/>
 <%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/login.css"> --%>
 
 <style>

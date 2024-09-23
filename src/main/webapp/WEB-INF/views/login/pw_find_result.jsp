@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- 비밀번호 찾기 결과 페이지 -->
-<jsp:include page="../header.jsp"/>
+<jsp:include page="../header3.jsp"/>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/myPageUpdate.css">
 <div class="my-page-container">
